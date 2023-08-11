@@ -1,13 +1,8 @@
+import { useShowDelivery } from "../hooks/useShowDelivery";
+import "./styles/Twopart.css";
 
-import { useShowDelivery } from '../hooks/useShowDelivery';
-import './styles/Twopart.css';
-
-export default function Twopart({
-  setup,
-  delivery,
-}) {
-
-  const showDelivery = useShowDelivery(setup)
+export default function Twopart({ setup, delivery }) {
+  const showDelivery = useShowDelivery(setup);
 
   return (
     <>
@@ -16,7 +11,7 @@ export default function Twopart({
       </div>
       {showDelivery && (
         <div className="joke-container delivery-container">
-          <p style={{ color: 'white' }}>{delivery}</p>
+          <p style={{ color: "white" }}>{delivery}</p>
         </div>
       )}
     </>
