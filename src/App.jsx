@@ -1,6 +1,4 @@
-
-import Single from './components/Single';
-import Twopart from './components/Twopart';
+import JokeContainer from './components/JokeContainer';
 import { useGetJoke } from './hooks/useGetJoke';
 import './style.css';
 
@@ -15,24 +13,7 @@ export default function App() {
         <h3 className="category-container">
           Category: <span>{joke?.category}</span>
         </h3>
-        <div
-          style={{
-            width: '100%',
-            height: 400,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          {joke?.type === 'single' ? (
-            <Single joke={joke.joke} />
-          ) : (
-            <Twopart
-              setup={joke?.setup}
-              delivery={joke?.delivery}
-            />
-          )}
-        </div>
+        <JokeContainer joke={joke} />
         <button className="btn-next" onClick={handleNewJoke}>
           New Joke
         </button>
