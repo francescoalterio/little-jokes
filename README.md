@@ -1,5 +1,6 @@
-# React + Vite
+# Little Jokes
 
+*React + Vite*
 This repository is a refactor of a project created with create-react-app.
 
 Start development server:
