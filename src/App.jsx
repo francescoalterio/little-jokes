@@ -6,7 +6,7 @@ import './style.css';
 
 export default function App() {
  
-  const {joke, showDelivery, setShowDelivery, handleNewJoke} = useGetJoke()
+  const {joke, handleNewJoke} = useGetJoke()
 
   return (
     <div className="background">
@@ -30,8 +30,6 @@ export default function App() {
             <Twopart
               setup={joke?.setup}
               delivery={joke?.delivery}
-              showDelivery={showDelivery}
-              setShowDelivery={setShowDelivery}
             />
           )}
         </div>

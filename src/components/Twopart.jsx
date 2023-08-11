@@ -1,19 +1,14 @@
-import  { useEffect } from 'react';
+
+import { useShowDelivery } from '../hooks/useShowDelivery';
 import './styles/Twopart.css';
 
 export default function Twopart({
   setup,
   delivery,
-  showDelivery,
-  setShowDelivery,
 }) {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowDelivery(true);
-    }, 3000);
 
-    return () => clearTimeout(timer)
-  }, [setup]);
+  const showDelivery = useShowDelivery(setup)
+
   return (
     <>
       <div className="joke-container">
