@@ -1,5 +1,5 @@
 import  { useEffect } from 'react';
-import './Twopart.css';
+import './styles/Twopart.css';
 
 export default function Twopart({
   setup,

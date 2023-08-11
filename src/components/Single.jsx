@@ -1,4 +1,4 @@
-import './Single.css';
+import './styles/Single.css';
 
 export default function Single({ joke }) {
   return (
