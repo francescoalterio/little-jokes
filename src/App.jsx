@@ -1,26 +1,12 @@
-import { useState, useEffect } from 'react';
+
 import Single from './components/Single';
 import Twopart from './components/Twopart';
+import { useGetJoke } from './hooks/useGetJoke';
 import './style.css';
 
 export default function App() {
-  const [joke, setJoke] = useState();
-  const [showDelivery, setShowDelivery] = useState(false);
-
-  useEffect(() => {
-    fetch('https://v2.jokeapi.dev/joke/Any')
-      .then((res) => res.json())
-      .then((result) => setJoke(result));
-  }, []);
-
-  const handleNewJoke = () => {
-    fetch('https://v2.jokeapi.dev/joke/Any')
-      .then((res) => res.json())
-      .then((result) => {
-        setShowDelivery(false);
-        setJoke(result);
-      });
-  };
+ 
+  const {joke, showDelivery, setShowDelivery, handleNewJoke} = useGetJoke()
 
   return (
     <div className="background">
